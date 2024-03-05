@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fly 1.wav-b34b378a37e09f9c0dc955f3c76053b9.sample"
+
+[deps]
+
+source_file="res://Audio/Fly 1.wav"
+dest_files=[ "res://.import/Fly 1.wav-b34b378a37e09f9c0dc955f3c76053b9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

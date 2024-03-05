@@ -1,0 +1,61 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Player.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://Audio/Coin 4.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/Coin 5.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/Coin 3.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/Jump 1.wav" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Coin 1.wav" type="AudioStream" id=8]
+[ext_resource path="res://Audio/Powerup 2.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/Powerup 3.wav" type="AudioStream" id=10]
+[ext_resource path="res://Sprites/Sight64x64.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/rope.png" type="Texture" id=12]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 23.9457
+height = 17.2711
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "drop"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.174622, 0.532365 )
+shape = SubResource( 1 )
+
+[node name="CollectCoin0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="CollectCoin1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="CollectCoin2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="CollectCoin3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Die" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="Sight" type="Sprite" parent="."]
+position = Vector2( 0, -86.7217 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Rope" type="Sprite" parent="."]
+scale = Vector2( 1, 0.2 )
+texture = ExtResource( 12 )
+centered = false

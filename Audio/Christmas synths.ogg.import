@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Christmas synths.ogg-7041522200ec9547343ab497df67e232.oggstr"
+
+[deps]
+
+source_file="res://Audio/Christmas synths.ogg"
+dest_files=[ "res://.import/Christmas synths.ogg-7041522200ec9547343ab497df67e232.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

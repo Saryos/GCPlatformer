@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Riverside Ride Short Loop.wav-666d384a3449fc4544c181ddd4a004dc.sample"
+
+[deps]
+
+source_file="res://Audio/Music/Riverside Ride Pack/Riverside Ride Short Loop.wav"
+dest_files=[ "res://.import/Riverside Ride Short Loop.wav-666d384a3449fc4544c181ddd4a004dc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

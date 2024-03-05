@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprites/24x32-characters-big-pack-by-Svetlana-Kushnariova/NPC/Townfolk-Child-F-001_sprite.png" type="Texture" id=1]
+[ext_resource path="res://SpeachBubble.tscn" type="PackedScene" id=2]
+[ext_resource path="res://NPC.gd" type="Script" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Walk"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 158.546, 53.2048 )
+
+[node name="NPC" type="KinematicBody2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 3
+frame = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Walk = SubResource( 2 )
+
+[node name="Trigger" type="Area2D" parent="."]
+
+[node name="TriggerShape" type="CollisionShape2D" parent="Trigger"]
+position = Vector2( 0.471924, 0.943878 )
+shape = SubResource( 3 )
+
+[node name="SpeachBubble" parent="." instance=ExtResource( 2 )]
+[connection signal="body_entered" from="Trigger" to="." method="_on_Trigger_body_entered"]

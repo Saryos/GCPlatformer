@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Audio/Music/Riverside Ride Pack/Riverside Ride Long Loop.wav" type="AudioStream" id=1]
+[ext_resource path="res://Background/title/wizardtower.png" type="Texture" id=2]
+[ext_resource path="res://Font/TitleFornt.tres" type="DynamicFont" id=3]
+
+[node name="TheEnd" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1604.0
+margin_bottom = 1000.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 381.0
+margin_top = 261.0
+margin_right = 931.0
+margin_bottom = 491.0
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Congratulations!
+You Passed the game!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

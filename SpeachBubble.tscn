@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/UIpack_RPG/PNG/panel_beige.png" type="Texture" id=2]
+[ext_resource path="res://SpeachBubble.gd" type="Script" id=3]
+
+[node name="SpeachBubble" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_right = 200.0
+margin_bottom = 23.0
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0.105882, 0.329412, 0.12549, 1 )
+custom_colors/font_color_selected = Color( 0.152941, 0.0901961, 0.0901961, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bubble" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -13.5, -8 )
+scale = Vector2( 1.11124, 0.252203 )
+texture = ExtResource( 2 )
+centered = false

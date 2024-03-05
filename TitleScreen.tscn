@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TitleControl.gd" type="Script" id=1]
+[ext_resource path="res://TitleScreen.gd" type="Script" id=2]
+[ext_resource path="res://Font/TitleFornt.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Font/Ubuntu-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Audio/Christmas synths.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Background/title/coldmountain.png" type="Texture" id=6]
+[ext_resource path="res://Font/new_dynamicfont.tres" type="DynamicFont" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 4 )
+
+[node name="TitleMain" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+margin_right = 1599.0
+margin_bottom = 1004.0
+texture = ExtResource( 6 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_left = 300.0
+margin_top = 250.0
+margin_right = 1300.0
+margin_bottom = 750.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1" type="Sprite" parent="CanvasLayer/Control"]
+position = Vector2( 500, 150 )
+
+[node name="Level1Text" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = 442.709
+margin_top = 125.309
+margin_right = 869.709
+margin_bottom = 179.309
+grow_horizontal = 2
+custom_fonts/normal_font = SubResource( 1 )
+text = "Level 1"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Level2" type="Sprite" parent="CanvasLayer/Control"]
+position = Vector2( 500, 350 )
+
+[node name="Level2Text" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = 439.419
+margin_top = 325.055
+margin_right = 737.419
+margin_bottom = 383.055
+size_flags_horizontal = 3
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Level 2"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = 772.0
+margin_top = 459.0
+margin_right = 1254.0
+margin_bottom = 714.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0.968627, 0.968627, 0.968627, 1 )
+text = "Credits
+
+Scripts & Design: Ear
+
+Graphics
+Tileset: The Chayed
+Player Character: doudoulolita
+NPC: Svetlana Kushnariova, lana-chan@yandex.ru
+Portal: LetargicDev
+Cave Image: MrBeast
+UI Background: Kenney.nl
+Title & end backgrounds: JAP
+Level 1 parallax: PWL
+Level 2 parallax: ansimuz
+Additional assets: Ear
+
+Sound Effects: @Shades
+
+Music:
+Title screen: 3xBlast
+Level 1: Brandon75689
+Level 2: Augmentality (Brandon Morris)
+End screen: Matthew Pablo
+
+All assets are from opengameart.org
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 441.0
+margin_top = 33.0
+margin_right = 1152.0
+margin_bottom = 265.0
+custom_fonts/normal_font = ExtResource( 7 )
+text = "Controls:
+Move with arrow keys
+Target and use rope with WASD (level 2), arrow up/down to climb rope
+Jump: Space
+Advance conversation; Enter
+
+Level 1: Arrow Right
+Level 2: Arrow Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true

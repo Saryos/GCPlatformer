@@ -1,0 +1,3 @@
+https://www.davidepesce.com/2020/02/07/godot-tutorial-15-sounds-music-with-audiostream/
+https://godotengine.org/qa/22860/looping-audio
+https://docs.godotengine.org/fi/stable/classes/class_randomnumbergenerator.html
